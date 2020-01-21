@@ -1,4 +1,7 @@
-document.getElementById("fname").onchange = firstname_check;
+var form_call = document.getElementById("form");
+
+var first_name_check = document.getElementById("fname");
+first_name_check.onchange = firstname_check;
 document.getElementById("sname").onchange = secondname_check;
 
 
@@ -7,7 +10,7 @@ function firstname_check(){
     var name_pattern = /^[a-zA-Z]+$/;
 
     var first_name = document.getElementById("fname").value;    
-    if(first_name.match(name_pattern) && first_name.length > 0){
+    if(first_name.match(name_pattern) || first_name.trim == ""){
         document.getElementById("fname_error").innerHTML = "  ";
         return true;
     }else{
@@ -75,7 +78,7 @@ function email_check()
             }
         }
 //form send 
-function abc(){
+form_call.onsubmit = function(){
     if(firstname_check() && secondname_check() && email_check()){
         return true;
     }else{

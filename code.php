@@ -1,7 +1,22 @@
+<!DOCTYPE html>
+<head>
+      <title> downlaod </title>
+</head>
+<body>
 <?php
-    $first = $_REQUEST['first'];
-    $sec= $_REQUEST['sec'];
-    echo "<h1> Hello $first $sec</h1>";
+  $first = $_REQUEST['first'];
+  $sec= $_REQUEST['sec'];
+  echo "<h1> Hello $first $sec</h1>";
+  session_start();
+  $first_name = $_POST['first'];
+  $second_name = $_POST['sec'];
+  $email_id = $_POST['email_input'];
+  $phone_no = $_POST['ph_no'];
+  $_SESSION['first_name'] = $first_name;
+  $_SESSION['second_name'] = $second_name;
+  //$_SESSION['marks'] = $final_marks;
+  $_SESSION['phone_no.'] = $phone_no;
+  $_SESSION['email_id'] = $email_id;
     
     if (isset($_POST['submit'])){
       image_upload();
@@ -16,7 +31,7 @@
           $fileTempName = $file['tmp_name'];
           $fileType = $file['type'];
           $fileError = $file['error'];
-        
+          global $fileDestination;
           $fileExtension = explode('.',$fileName);
           $allowed = array("jpg","jpeg","png");
           $fileActualExtension = strtolower(end($fileExtension));
@@ -33,26 +48,27 @@
               echo "<br>";
             }
           }else{
-          
             echo "Wrong file Type";
         }
       }else{
         error("value=false");
+        return false;
       }
     }
     function marks_table(){
       $marks = $_REQUEST['marks'];
       $test = explode(PHP_EOL,$marks);
+      global $final_marks;
       foreach($test as $val)
       {
           if(strlen($val) > 1){
               $temp = explode('|',$val);
-              $final_val[$temp[0]]=$temp[1];
+              $final_marks[$temp[0]]=$temp[1];
           }  
       }
       echo "<table style='border: 1px solid black'>";
       echo "<th>Marks</th>";
-      foreach($final_val as $sub => $point){
+      foreach($final_marks as $sub => $point){
           echo "<tr >";
               echo "<td style='border: 1px solid black'>$sub</td>";
               echo "<td style='border: 1px solid black'>$point</td>";
@@ -75,7 +91,7 @@
   }
   function email_check(){
       
-    //api Key
+   /* //api Key
     $key = '5a4e62a20fafb27a5caa9d6d94776fe6';
 
     //email input from user
@@ -97,11 +113,27 @@
      echo "your mail id is valid: $email_id";
     }else{
       print_r("your mail id is not valid");
-    }
+    }*/
 
   }
   function error($s){
     header("location: ../index.php?$s");  
     exit();
   }
-?> 
+      session_start();
+      $first_name = $_POST['first'];
+      $second_name = $_POST['sec'];
+      $email_id = $_POST['email_input'];
+      $phone_no = $_POST['ph_no'];
+      $_SESSION['first_name'] =$first_name;
+      $_SESSION['second_name'] = $second_name;
+      $_SESSION['marks'] = $final_marks;
+      $_SESSION['phone_no.'] = $phone_no;
+      $_SESSION['email_id'] = $email_id;
+       $_SESSION['img_path'] = $fileDestination;
+      session_write_close();
+?>
+
+      <a href = "download.php">Download</a>
+</body>
+</html>

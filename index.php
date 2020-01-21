@@ -6,7 +6,7 @@
     </head>
     <body>
     <div>
-        <form action="code.php" onsubmit="return abc()" method="POST" enctype="multipart/form-data" onsubmit="onsubmit()">
+        <form action="code.php" id = "form" method="POST" enctype="multipart/form-data">
             <div>
                 <b> First Name: </b><input type="text" name="first" id="fname"/>
                  <label id="fname_error"></label>
@@ -39,7 +39,7 @@
             </br>
             <div>
                <b> Enter the phone no.: </b><input type="text" name="ph_no" id= "phno">
-                <label id = "ph_no_error"></lable>
+                <label id = "ph_no_error"></label>
             </div>
             </br>
             <div>
