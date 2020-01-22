@@ -8,14 +8,18 @@
     $email_id = $_SESSION['email_id'];
     $img_src = $_SESSION['img_path'];
     session_destroy();
-    header("Content-type: application/vnd.ms-word");
-    header("Content-Disposition: attachment;Filename=document_name.doc");
+    //header("Content-type: application/vnd.ms-word");
+    //header("Content-Disposition: attachment;Filename=document_name.doc");
     $a = "First name : ".$first_name."\r\n";
     $a .= "Last name: ".$last_name."\r\n";
     $a .= "Email id : ".$email_id."\r\n";
     $a .="Phone No.: ".$phone_no."\r\n";
+    $a .="Marks with Subjects: \r\n";
+    foreach($final_marks as $val => $point){
+        $a .="Subject :".$val."Marks :".$point;
+    }
     $file_name = $first_name.'.doc';
     file_put_contents($file_name,$a);
     readfile($file_name);
-    
+    fclose($file_name);
 ?>
