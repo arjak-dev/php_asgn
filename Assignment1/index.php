@@ -6,6 +6,30 @@
          if(!isset($_SESSION['code'])){
                 unset($_SESSION['code']);
                 header("Location: http://www.phpasgn.com/Login/");
+        }
+        elseif(isset($_GET['q'])){
+                 $q=$_GET['q'];
+                 switch($q){
+                       case 1:
+                                 header("Location: http://www.phpasgn.com/Assignment1/");
+                                break;
+                       case 2:
+                                header("Location: http://www.phpasgn.com/Assignment2/");
+                                break;
+                        case 3:
+                                header("Location: http://www.phpasgn.com/Assignment3/");
+                                break;
+                        
+                        case 4:
+                                header("Location: http://www.phpasgn.com/Assignment4/");
+                                break;
+
+                        case 5:
+                                header("Location: http://www.phpasgn.com/Assignment5/");
+                                break;
+                        default:
+                                header("Location: http://www.phpasgn.com/Login/");
+                 }
          }
 ?>
 <!DOCTYPE html>
