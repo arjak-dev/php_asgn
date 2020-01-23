@@ -13,6 +13,8 @@ if(isset($_POST['submit'])){
     session_start();
     unset($_SESSION['code']);
     header("Location: http://www.phpasgn.com/Login/");
+}else{
+    header("Location: http://www.phpasgn.com/Login/");
 }
 
 ?>

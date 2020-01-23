@@ -5,6 +5,8 @@
         marks_input();
         phone_no_check();
         email_validate();
+    }else{
+        header("Location: http://www.phpasgn.com/Login/");
     }
     function name_check(){
         $first_name = $_POST['fname'];

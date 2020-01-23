@@ -40,7 +40,7 @@ function fullname_fill(){
 
 //form send 
 form_call.onsubmit = function(){
-    if(firstname_check() && secondname_check()){
+    if(firstname_check() s&& secondname_check()){
         return true;
     }else{
         return false;
