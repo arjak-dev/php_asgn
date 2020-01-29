@@ -38,7 +38,7 @@
                 move_uploaded_file($fileTempName,$fileDestination);
                 echo "Your image:";
                 //echo "<img src= $fileDestination width = 100px height = 100px>";  
-                header("Location: http://www.phpasgn.com/Assignment3/");
+                header("Location: /Assignment3/");
             }
             }else{
                 echo "Wrong file Type";

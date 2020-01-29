@@ -13,7 +13,7 @@
         email_validate();
        // send_data();
     }else{
-        header("Location: /Login/");
+        header("Location: http://www.phpasgn.com/Login/");
     }
     function name_check(){
             $first_name = $_POST['fname'];
@@ -104,15 +104,14 @@
     }
     function email_validate(){
           //api Key
-        $key = '5a4e62a20fafb27a5caa9d6d94776fe6';
+        //  $key = '5a4e62a20fafb27a5caa9d6d94776fe6';
 
          //email input from user
         $email_id = $_POST['email_input'];
         print_r("Your mail id:".$email_id);
         $_SESSION['email_id'] = $email_id;
-
         //initialize curl:
-        $ch = curl_init('http://apilayer.net/api/check?access_key='.$key.'&email='.$email_id);
+    /* $ch = curl_init('http://apilayer.net/api/check?access_key='.$key.'&email='.$email_id);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 
         //DATA STORE
@@ -122,11 +121,14 @@
 
         //Decoding jason file:
         $final_result = json_decode($json, true);
+        //print_r($final_result);
         if($final_result['format_valid'] && $final_result['smtp_check']){
+            //header("Location: http://www.phpasgn.com/Assignment6/");
+            $_SESSION['email_id'] =  $email_id;
             print_r("Your mail id:".$email_id);
         }else{
                 print_r("your mail id is not valid");
-        }
+        }*/
     }
 ?>
  <a href = "download.php">Download</a>

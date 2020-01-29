@@ -3,5 +3,5 @@
     //$code = $_SESSION['code'];
     //print_r($code);
     unset($_SESSION['code']);
-    header("Location: /Login/");
-?>
+    header("Location: /login.html");
+?>  

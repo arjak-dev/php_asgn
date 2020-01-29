@@ -3,29 +3,29 @@
          session_start();
          if(!isset($_SESSION['code'])){
                 unset($_SESSION['code']);
-                header("Location: http://www.phpasgn.com/Login/");
+                header("Location: /Login/");
          }elseif(isset($_GET['q'])){
             $q=$_GET['q'];
             switch($q){
                   case 1:
-                            header("Location: http://www.phpasgn.com/Assignment1/");
+                            header("Location: /Assignment1/");
                            break;
                   case 2:
-                           header("Location: http://www.phpasgn.com/Assignment2/");
+                           header("Location: /Assignment2/");
                            break;
                    case 3:
-                           header("Location: http://www.phpasgn.com/Assignment3/");
+                           header("Location: /Assignment3/");
                            break;
                    
                    case 4:
-                           header("Location: http://www.phpasgn.com/Assignment4/");
+                           header("Location: /Assignment4/");
                            break;
 
                    case 5:
-                           header("Location: http://www.phpasgn.com/Assignment5/");
+                           header("Location: /Assignment5/");
                            break;
                    default:
-                           header("Location: http://www.phpasgn.com/Login/");
+                           header("Location: /Login/");
             }
         }
 ?>
@@ -57,10 +57,10 @@
         </br>
         </br>
         <ul type="square">Page Links:
-                <a href="http://www.phpasgn.com/Assignment1/"><li >Question 1</li></a>
-                <a href="http://www.phpasgn.com/Assignment2/"><li>Question 2</li></a>
-                <a href="http://www.phpasgn.com/Assignment3/"><li>Question 3</li></a>
-                <a href="http://www.phpasgn.com/Assignment5/"><li>Question 5</li></a>
+                <a href="/Assignment1/"><li >Question 1</li></a>
+                <a href="/Assignment2/"><li>Question 2</li></a>
+                <a href="/Assignment3/"><li>Question 3</li></a>
+                <a href="/Assignment5/"><li>Question 5</li></a>
 
         </ul>
     </body>

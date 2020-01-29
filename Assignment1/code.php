@@ -5,7 +5,7 @@
             $second_name = $_POST['sec'];
             $pattern = '/^[a-zA-Z]+$/';
             if(preg_match($pattern,$first_name) && preg_match($pattern,$second_name)){
-                header("Location: http://www.phpasgn.com/Assignment2/");
+                header("Location: /Assignment2/");
           
             }   
             else{

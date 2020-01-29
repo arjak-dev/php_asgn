@@ -5,16 +5,16 @@ if(isset($_POST['submit'])){
     if($user_name == "admin" && $password == "admin"){
         session_start();
         $_SESSION['code']="pass";
-        header("Location: http://www.phpasgn.com/Assignment1/");
+        header("Location: /Assignment1/");
     }else{
         echo "invalid password";
     }
 }elseif(isset($_POST['logout'])){
     session_start();
     unset($_SESSION['code']);
-    header("Location: http://www.phpasgn.com/Login/");
+    header("Location: /Login/");
 }else{
-    header("Location: http://www.phpasgn.com/Login/");
+    header("Location: /Login/");
 }
 
 ?>

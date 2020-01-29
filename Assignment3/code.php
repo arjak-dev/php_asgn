@@ -62,6 +62,6 @@ function image_upload(){
                 $final_marks[$temp[0]]=$temp[1];
             }  
         }
-        header("Location: http://www.phpasgn.com/Assignment4/");
+        header("Location: /Assignment4/");
   }
 ?>

@@ -78,7 +78,7 @@
         $ph_no = $_POST['ph_no'];
         $valid='/^\+(91)[0-9]{10}$/';
         if(preg_match($valid,$ph_no)){
-            header("Location: http://www.phpasgn.com/Assignment5/");
+            header("Location: /Assignment5/");
           //print_r("your phone no.:".$ph_no);
         }else{
             echo "invalid phn no.";
