@@ -15,7 +15,7 @@
             $result -> free();
             $connection -> close();
         }else{
-            $sql = "insert into user (user_name,password) values('$user_name','$password')";
+            $sql = "insert into user_login (user_name,password) values('$user_name','$password')";
             if($connection->query($sql)){
                 echo "user Registered";
                 echo "<a href='login.html'>Click here to go to the login page</a>";

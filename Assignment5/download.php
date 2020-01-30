@@ -43,7 +43,7 @@
   //echo "<b>Profile Picture:</b></br>";
    // echo "<img src='$img_dest 'width='100px' height='100px'>";
     //echo "</br>";
-    $file_name = $first_name.".doc" ;
+    $file_name = $first_name.time().".doc" ;
     touch($file_name);
     // $file_name = $first_name.'.doc';
     //$file = fopen($file_name,"w");

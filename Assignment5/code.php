@@ -112,7 +112,7 @@
         $_SESSION['email_id'] = $email_id;
 
         //initialize curl:
-        $ch = curl_init('http://apilayer.net/api/check?access_key='.$key.'&email='.$email_id);
+        /*$ch = curl_init('http://apilayer.net/api/check?access_key='.$key.'&email='.$email_id);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 
         //DATA STORE
@@ -126,7 +126,7 @@
             print_r("Your mail id:".$email_id);
         }else{
                 print_r("your mail id is not valid");
-        }
+        }*/
     }
 ?>
  <a href = "download.php">Download</a>

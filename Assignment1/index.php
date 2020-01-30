@@ -38,12 +38,13 @@
         <title> First assignment</title>
 </head>
 <body>
+        <h1>Assignment One</h1>
         <form action="code.php" method="post" id="form_call">
                 <b>First Name: </b><input type="text" name="fname" id="fname" required>
-                 <label id="fname_error"></label></br>
+                 <label id="fname_error"></label></br></br>
                 <b>Second name: </b><input type="text" id="sname" name="sec" required>
-                <label id= "sname_error"></label></br>
-                <b> Full name:</b><input type="text" id="fullname" value="" disabled></br>
+                <label id= "sname_error"></label></br></br>
+                <b> Full name:</b><input type="text" id="fullname" value="" disabled></br></br>
 		<button type="submit" name="submit">Submit</button>
          </form>
          <a href="logout.php">logout</a>

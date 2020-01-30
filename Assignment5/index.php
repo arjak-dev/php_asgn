@@ -35,24 +35,19 @@
         <title>Email Input</title>
     </head>
     <body>
+        <h1>Assignment Five</h1>
         <form action="code.php" method= "POST" id="form_call" enctype="multipart/form-data">
-                <b>First Name: </b><input type="text" name="fname" id="fname" required>
-                <label id="fname_error"></label></br>
-                <b>Second name: </b><input type="text" id="sname" name="sec" required>
-                <label id= "sname_error"></label></br>
-                <b> Full name:</b><input type="text" id="fullname" value="" disabled></br>
-                <b> Enter your image:</b><input type="file" name="file" id="img_upload" required>    
-                <div>
-                   <b> Enter the marks: </b><textarea name="marks" id = "marks_table" required></textarea>
-                </div>
-                <div>
-                    <b> Enter the phone no.: </b><input type="text" name="ph_no" id= "phno" required>
-                    <label id = "ph_no_error"></label>
-                </div>
-                <div>
-                    <b> Enter email id:</b><input name = "email_input" type="text" id="email_input" required>
-                    <label id="email_error"></label>
-                </div>
+                <b>First Name: </b><input type="text" name="fname" id="fname" placeholder = "First Name" required>
+                <label id="fname_error"></label></br></br>
+                <b>Second name: </b><input type="text" id="sname" name="sec" placeholder = "Second Name" required>
+                <label id= "sname_error"></label></br></br>
+                <b> Full name:</b><input type="text" id="fullname" value="" disabled></br></br>
+                <b> Enter your image:</b><input type="file" name="file" id="img_upload" required></br></br>    
+                <b> Enter the marks: </b><textarea name="marks" id = "marks_table" placeholder = "Marks" required></textarea></br></br>
+                <b> Enter the phone no.: </b><input type="text" name="ph_no" id= "phno" placeholder = "Phone Number" required>
+                <label id = "ph_no_error"></label></br></br>
+                <b> Enter email id:</b><input name = "email_input" type="text" id="email_input" placeholder = "Email id" required>
+                <label id="email_error"></label></br></br>
                 <input type="submit" value="submit" name="submit">
         </form>
         <a href="logout.php">logout</a>

@@ -62,9 +62,26 @@ function email_check()
                     return false;
             }
         }
+
+//phone number checking 
+document.getElementById('phno').onsubmit = phone_no_check;
+function phone_no_check(){
+    var valid_pattern = /^\+(91)[0-9]{10}$/;
+    var input = document.getElementById('phno').value;
+    if(input.match(valid_pattern)){
+        console.log('true');
+        return true;
+    } else{
+        console.log('false');
+        document.getElementById('ph_no_error').innerHTML = "invalid phone number";
+        return false;
+    }
+}
+
+
 //form send 
 form_call.onsubmit = function(){
-    if(firstname_check() && secondname_check() && email_check()){
+    if(firstname_check() && secondname_check() && email_check() && phone_no_check()){
         return true;
     }else{
         return false;

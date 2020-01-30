@@ -37,19 +37,17 @@
         <meta content="utf-8" http-equiv="encoding">
     </head>
     <body>
+        <h1>Assignment Three</h1>
         <form action="code.php" method="POST" id="form_call" enctype="multipart/form-data">
-            
-             <b>First Name: </b><input type="text" name="fname" id="fname" required>
-             <label id="fname_error"></label></br>
-            <b>Second name: </b><input type="text" id="sname" name="sec" required>
-            <label id= "sname_error"></label></br>
-            <b> Full name:</b><input type="text" id="fullname" value="" disabled></br>
-            <b> Enter your image:</b><input type="file" name="file" id="img_upload" required>    
-            <div>
-                <b> Enter the marks: </b><textarea name="marks" id = "marks_table" required></textarea>
-            </div>
-             <input type="submit" name = "submit"/>
-        </form>
+                <b>First Name: </b><input type="text" name="fname" id="fname" required>
+                <label id="fname_error"></label></br></br>
+                <b>Second name: </b><input type="text" id="sname" name="sec" required>
+                <label id= "sname_error"></label></br></br>
+                <b> Full name:</b><input type="text" id="fullname" value="" disabled></br></br>
+                <b> Enter your image:</b><input type="file" name="file" id="img_upload" required></br></br>    
+                <b> Enter the marks: </b><textarea name="marks" id = "marks_table" required></textarea></br></br>
+                <input type="submit" name = "submit"/>
+        </form>                
         <a href="logout.php">logout</a>
         </br>
         </br>
