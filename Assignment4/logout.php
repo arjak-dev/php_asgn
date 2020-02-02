@@ -3,5 +3,6 @@
     //$code = $_SESSION['code'];
     //print_r($code);
     unset($_SESSION['code']);
+    session_destroy();
     header("Location: /Login/");
 ?>

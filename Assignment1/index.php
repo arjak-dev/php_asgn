@@ -36,28 +36,23 @@
 <html>
 <head>
         <title> First assignment</title>
+        <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-        <h1>Assignment One</h1>
+        
         <form action="code.php" method="post" id="form_call">
+        <h1>Assignment One</h1>
                 <b>First Name: </b><input type="text" name="fname" id="fname" required>
                  <label id="fname_error"></label></br></br>
                 <b>Second name: </b><input type="text" id="sname" name="sec" required>
                 <label id= "sname_error"></label></br></br>
                 <b> Full name:</b><input type="text" id="fullname" value="" disabled></br></br>
-		<button type="submit" name="submit">Submit</button>
+                <button type="submit" name="submit">Submit</button>
+                <a href="logout.php" class="logout">logout</a>
          </form>
-         <a href="logout.php">logout</a>
+        
         </br>
         </br>
-        <ul type="square">Page Links:
-                <a href="/Assignment2/"><li >Question 2</li></a>
-                <a href="/Assignment3/"><li>Question 3</li></a>
-                <a href="/Assignment4/"><li>Question 4</li></a>
-                <a href="/Assignment5/"><li>Question 5</li></a>
-
-        </ul>
-
 </body>
 <script src="valid.js"></script>
 </html>

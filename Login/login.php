@@ -1,20 +1,16 @@
 <?php
 if(isset($_POST['submit'])){
     $user_name = $_POST['user_name'];
-    $password = $_POST['user_name'];
+    $password = $_POST['password'];
     if($user_name == "admin" && $password == "admin"){
         session_start();
         $_SESSION['code']="pass";
-        header("Location: /Assignment1/");
+        header("Location: list.php");
     }else{
         echo "invalid password";
     }
-}elseif(isset($_POST['logout'])){
-    session_start();
-    unset($_SESSION['code']);
-    header("Location: /Login/");
-}else{
-    header("Location: /Login/");
 }
+
+
 
 ?>

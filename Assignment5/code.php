@@ -129,6 +129,5 @@
         }*/
     }
 ?>
- <a href = "download.php">Download</a>
 </body>
 </html>

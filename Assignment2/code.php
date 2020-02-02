@@ -9,7 +9,7 @@
             $pattern = '/^[a-zA-Z]+$/';
             if(preg_match($pattern,$first_name) && preg_match($pattern,$second_name)){
                 //header("Location: http://www.phpasgn.com/Assignment2/");
-          
+                echo "<h1>Hi $first_name $second_name</h1>";
             }   
             else{
                 echo "Invalid First Name And second name";
@@ -37,8 +37,9 @@
                 $fileDestination="./upload/".$fileNewName;
                 move_uploaded_file($fileTempName,$fileDestination);
                 echo "Your image:";
-                //echo "<img src= $fileDestination width = 100px height = 100px>";  
-                header("Location: /Assignment3/");
+                echo "</br>";
+                echo "<img src= $fileDestination width = 100px height = 100px>";  
+              //  header("Location: /Assignment3/");
             }
             }else{
                 echo "Wrong file Type";

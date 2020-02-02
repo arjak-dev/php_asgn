@@ -1,0 +1,24 @@
+form {
+    align-content: center;
+     margin: 100px 300px  0 300px;
+     padding: 40px;
+     border: 1px solid ;
+}
+.logout{
+    text-decoration: none;
+    color: white;
+    padding : 3px;
+    background:#0062ffd6;
+    border-radius: 5px;
+}
+
+
+.list li{
+    padding: 5px;
+    font-size: 1.5em;
+
+}
+.list a{
+    text-decoration: none;
+}
+
