@@ -1,8 +1,15 @@
+body{
+	margin:0px;
+	padding:0px;
+}
 form {
-    align-content: center;
-     margin: 100px 300px  0 300px;
-     padding: 40px;
-     border: 1px solid ;
+	width: 400px;
+	padding: 40px;
+    position:absolute;
+	top:50%;
+	left: 50%;
+	transform : translate(-50%,-50%);
+	border: 1px solid black;
 }
 .logout{
     text-decoration: none;
