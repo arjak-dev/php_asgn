@@ -28,4 +28,7 @@ form {
 .list a{
     text-decoration: none;
 }
+input{
+    border: 1px oslid black;
+}
 
